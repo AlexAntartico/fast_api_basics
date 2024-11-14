@@ -58,7 +58,7 @@ divide(9, 0)
 
 from typing import Callable
 
-def smart_divide(func:Callable[[int,int],float]):
+def smart_divide_annotated(func:Callable[[int,int],float]):
     def inner(a, b):
         if b == 0:
             print('Whoops! Division by 0')
