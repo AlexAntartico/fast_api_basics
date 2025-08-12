@@ -7,8 +7,108 @@
 
 ...
 
+# Built-in functions
+
+## print()
+* Outpus a specified object to the screen
+* Receives the object you want to print as an argument
+* Takes any number of arguments, separated by a comma. Prints all arguments
+
+```python
+month = "August"
+print("Investigate failed jobs during", month, "to detect possible recurrence.")
+```
+## type()
+* Returns the data type of its argument
+* Receives the object you want the type of as an argument, returns the data type.
+* Takes only one argument
+
+```python
+month = "August"
+print(type(month))
+
+# Will return:
+$ <class 'str'>
+```
+
+## str()
+* Converts any data type to a string
+* Takes only one argument, the object you want to convert to a string. Returns a `str()` representation of the argument
+
+```python
+month_num = 8
+string_month_num = str(month_num)
+print(month_num)
+print(type(month_num))
+
+# Will return 8 as a str
+$ 8
+$ <class 'str'>
+```
+
+## sorted()
+* Sorts the components of a list
+* It does not modify the order of the iterable
+* Works on any iterable, like a string.
+* Sorts in ascending order, ie; numbers are sorted from smallest to ragest.
+
+```python
+month_list = [10, 12, 1, 4, 3, 2]
+print(sorted(month_list))
+
+# Will return a sorted iterable
+$ [1, 2, 3, 4, 10, 12]
+```
+
+## min() - max()
+* Accept arguments of an iterable
+* returns the largest or smallest value
+
+```python
+session_minutes = [65, 10, 120, 45, 30, 180, 115]
+print(min(session_minutes))
+print(max(session_minutes))
+
+# Will return a sorted iterable
+$ 10
+$ 180
+```
 
 # Type hints
+
+## Annotating Variables
+
+Lets take the basics:
+
+`name = "Eddie"`
+
+`age = 35`
+
+`months = 420.5`
+
+`num_list = [40, 20, 10, 4, 100, 200]`
+
+`host_tuple = ("uuprd1845", "xxdev9031", "ttuat1903")`
+
+`location_dict = {"State": "Veracruz", "Capital_city": "Xalapa"}`
+
+`range_set = {10, 20, 30, 40, 50}`
+
+```python
+import typing
+
+name: str = "Eddie"
+age: int = 35
+months: float = 420.5
+num_list: typing.List[int] = [40, 20, 10, 4, 100, 200]
+host_tuple:  typing.Tuple[int, int, int] = ("uuprd1845", "xxdev9031", "ttuat1903")
+location_dict: typing.Dict[str, int] = {"State": "Veracruz", "Capital_city": "Xalapa"}
+range_set: typing.Set[int] = {10, 20, 30, 40, 50}
+```
+
+
+
+
 
 ## Simple Type Hints:
 
